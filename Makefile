@@ -13,13 +13,9 @@ DF=drupal-obiba
 DAdm=administrator
 Spass=password
 #obiba
-#MV=7.x-32.1
-#AV=7.x-2.4
-#BV=7.x-4.4
-
-MV=7.x-22.3
-AV=7.x-2.3
-BV=7.x-4.3
+MV=7.x-32.1
+AV=7.x-2.4
+BV=7.x-4.4
 
 build-obiba: remove_old_obiba download-drupal mysql-create site-install obiba-dl-dependecies obiba-en-dependecies obiba-js-dependecies obiba-composer-conf obiba-settings obiba-permission
 
