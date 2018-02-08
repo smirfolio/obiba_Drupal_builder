@@ -9,11 +9,11 @@ dbp=1234
 dbn=drupal_obiba
 #Drupal
 DV=7.56
-DF=drupal-obiba
+DF=drupal-release
 DAdm=administrator
 Spass=password
 #obiba
-MV=7.x-32.1
+MV=7.x-32.2
 AV=7.x-2.4
 BV=7.x-4.4
 
@@ -35,7 +35,7 @@ obiba-dl-dependecies:
 	pushd $(WF)/$(DF) && sudo drush dl -y bootstrap obiba_bootstrap-$(BV) obiba_mica-$(MV) obiba_agate-$(AV)  autologout && popd
 
 obiba-en-dependecies:
-	pushd $(WF)/$(DF) && sudo drush en -y bootstrap obiba_bootstrap-$(BV) obiba_mica-$(MV) obiba_agate-$(AV)  autologout && popd
+	pushd $(WF)/$(DF) && sudo drush en -y bootstrap obiba_bootstrap obiba_mica obiba_agate  autologout && popd
 
 obiba-clear-cache:
 	pushd $(WF)/$(DF) && sudo drush cc all && popd
